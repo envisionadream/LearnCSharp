@@ -24,13 +24,53 @@ namespace datatypes
             //function which is also sent a a single character the result sould be  printed  to the console
             // call  arithmetic with an example of each type of calculation
 
-            //Create a method called WriteStringArray which writes the contents of an array to the colsole.
-            // call WriteStringArray with an array containign 3 strings
+            //Create a method called WriteStringArray which writes the contents of an array to the console.
+            // call WriteStringArray with an array containing 3 strings
+            string[] myStrings = new string[] {"JoinStrings", "Arthimetic", "test3"};
+            myStrings[0] = "JoinStrings";
+            myStrings[1] = "Arithmetic";
+            myStrings[2] = "test3";
 
-
+            for (int i = 0; i < myStrings.Length; i++)
+            {
+                Console.WriteLine(myStrings[i]);
+            }
+            string myresult = JoinStrings("daisy", "garthland");
 
         }
 
+        public static string JoinStrings(string firstString, string secondString)
+        {
+            var resultString = firstString + ' ' + secondString;
+            Console.WriteLine(resultString);
+            return resultString;
+        }
 
+        public static int Arithmetic(int no1, int no2, char oper)
+        {
+            int result = 0;
+            if (oper == '+')
+            {
+                result = no1 + no2;
+
+            }
+            else if (oper == '-')
+            {
+                result = no1 - no2;
+
+            }
+            else if (oper == '/')
+            {
+                result = no1 / no2;
+
+            }
+            else if (oper == '*')
+            {
+                result = no1 * no2;
+
+
+            }
+            return result;
+        }
     }
 }
